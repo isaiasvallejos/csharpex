@@ -1,0 +1,7 @@
+C:\Users\Aluno\Documentos\C#\C#\Company\Company\bin\Debug\Company.exe.config
+C:\Users\PC Gamer\Documents\learning\csharp\Company\Company\bin\Debug\Company.exe.config
+C:\Users\PC Gamer\Documents\learning\csharp\Company\Company\bin\Debug\Company.exe
+C:\Users\PC Gamer\Documents\learning\csharp\Company\Company\bin\Debug\Company.pdb
+C:\Users\PC Gamer\Documents\learning\csharp\Company\Company\obj\Debug\Company.csprojResolveAssemblyReference.cache
+C:\Users\PC Gamer\Documents\learning\csharp\Company\Company\obj\Debug\Company.exe
+C:\Users\PC Gamer\Documents\learning\csharp\Company\Company\obj\Debug\Company.pdb

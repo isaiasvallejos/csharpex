@@ -17,6 +17,8 @@ namespace Company
             do
             {
 
+                Console.Clear();
+
                 Console.WriteLine("***** COMPANY *****");
                 Console.Write("\n");
                 Console.WriteLine("1 - Create departament");
@@ -29,6 +31,25 @@ namespace Company
 
                 switch (option)
                 {
+
+                    case "1":
+
+                        Console.Clear();
+
+                        Console.WriteLine("***** CREATE DEPARTAMENT *****");
+                        Console.Write("\n");
+                        Console.ReadLine();
+
+                        Console.Write("Press any key to back to menu.");
+                        Console.ReadLine();
+                       
+                        break;
+                    case "2":
+                        break;
+                    case "3":
+                        break;
+                    default:
+                        break;
 
                 }
 
