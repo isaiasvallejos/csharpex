@@ -4,38 +4,32 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Company
-{
-    class Employee
-    {
+namespace Company {
+
+    class Employee {
         // Key attribute
-        public int id
-        {
+        public int id {
             get;
             set;
         }
 
-        public string name
-        {
+        public string name {
             get;
             set;
         }
 
         // Unique attribute
-        public string document
-        {
+        public string document {
             get;
             set;
         }
 
-        public Departament departament
-        {
+        public Departament departament {
             get;
             set;
         }
 
-        public Employee(string name, string document, Departament departament)
-        {
+        public Employee(string name, string document, Departament departament) {
             this.name = name;
             this.document = document;
             this.departament = departament;
