@@ -1,3 +1,3 @@
 # C# Projects
 
-* Company: CMD Application
+* Company - Console Application

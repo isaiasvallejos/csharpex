@@ -8,6 +8,7 @@ namespace Company
 {
     class Employee
     {
+        // Key attribute
         public int id
         {
             get;
@@ -31,6 +32,14 @@ namespace Company
         {
             get;
             set;
+        }
+
+        public Employee(string name, string document, Departament departament)
+        {
+            this.id = EmployeeRepository.NextId();
+            this.name = name;
+            this.document = document;
+            this.departament = departament;
         }
 
     }
