@@ -2,4 +2,4 @@
 
 #### Company (Console Application) (.exe in [Debug](https://github.com/isaiasvallejos/csharp/tree/master/Company/Company/obj/Debug))
 
-###### Simple manager to departament and employees
+###### Simple program to manage departament and employees
