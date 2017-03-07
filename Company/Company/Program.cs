@@ -61,6 +61,12 @@ namespace Company {
                         Console.WriteLine("***** REGISTER EMPLOYEE *****");
                         Console.Write("\n");
 
+                        if (DepartamentRepository.SelectAll().Count() == 0) {
+                            Console.WriteLine("Employees needs a department registred.");
+
+                            break;
+                        }
+
                         Console.Write("Employee: (name) ");
                         string employeeName = Console.ReadLine();
 
