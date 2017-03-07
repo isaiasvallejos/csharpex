@@ -20,7 +20,6 @@ namespace Company {
         }
 
         public Departament(string name) {
-            this.id = DepartamentRepository.NextId();
             this.name = name;
         }
 

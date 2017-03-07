@@ -10,8 +10,9 @@ namespace Company {
 
         private static List<Employee> employees = new List<Employee>();
 
-        public static void Add(Employee Employee) {
-            employees.Add(Employee);
+        public static void Add(Employee employee) {
+            employee.id = EmployeeRepository.NextId();
+            employees.Add(employee);
         }
 
         public static Employee SelectOneById(int id) {

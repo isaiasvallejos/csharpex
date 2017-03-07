@@ -36,7 +36,6 @@ namespace Company
 
         public Employee(string name, string document, Departament departament)
         {
-            this.id = EmployeeRepository.NextId();
             this.name = name;
             this.document = document;
             this.departament = departament;

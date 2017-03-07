@@ -11,6 +11,7 @@ namespace Company {
         private static List<Departament> departaments = new List<Departament>();
 
         public static void Add(Departament departament) {
+            departament.id = DepartamentRepository.NextId();
             departaments.Add(departament);
         }
 
