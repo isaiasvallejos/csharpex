@@ -31,7 +31,7 @@ namespace Company {
             return employees.Where(employee => employee.departament.Equals(departament)).ToList();
         }
 
-        public static int NextId() {
+        private static int NextId() {
             return employees.Count() + 1;
         }
 

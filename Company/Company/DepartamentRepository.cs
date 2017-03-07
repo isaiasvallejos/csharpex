@@ -27,7 +27,7 @@ namespace Company {
             return departaments;
         }
 
-        public static int NextId() {
+        private static int NextId() {
             return departaments.Count() + 1;
         }
 
