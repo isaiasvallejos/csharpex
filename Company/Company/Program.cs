@@ -110,10 +110,13 @@ namespace Company {
 
                         Console.Write("\n");
 
-                        Console.WriteLine("Employees in departament: ");
-
-                        foreach (Employee departamentEmployee in departamentEmployees) {
-                            Console.Write("- {0}\n", departamentEmployee.name);
+                        if(departamentEmployees.Count() == 0) {
+                            Console.Write("Departament is empty.\n");
+                        } else {
+                            Console.WriteLine("Employees in departament: ");
+                            foreach (Employee departamentEmployee in departamentEmployees) {
+                                Console.Write("- {0}\n", departamentEmployee.name);
+                            }
                         }
 
                         break;
