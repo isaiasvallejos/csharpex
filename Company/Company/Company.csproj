@@ -44,9 +44,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Departament.cs" />
-    <Compile Include="DepartamentRepository.cs" />
+    <Compile Include="DAO\Departament.cs" />
     <Compile Include="Employee.cs" />
-    <Compile Include="EmployeeRepository.cs" />
+    <Compile Include="DAO\Employee.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

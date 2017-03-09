@@ -24,7 +24,7 @@ namespace Company {
                 Console.WriteLine("3 - Consult departament");
                 Console.WriteLine("4 - Exit");
                 Console.Write("\n");
-                Console.Write("Selecione uma opção: ");
+                Console.Write("Choose an option: ");
 
                 option = Console.ReadLine();
 
@@ -40,7 +40,7 @@ namespace Company {
                         Console.Write("Departament: (name) ");
                         string departamentName = Console.ReadLine();
 
-                        if (DepartamentRepository.SelectOneByName(departamentName) != null) {
+                        if (DAO.Departament.SelectOneByName(departamentName) != null) {
                             Console.WriteLine("\nDepartament name already registred.");
 
                             break;
@@ -48,9 +48,9 @@ namespace Company {
 
                         Departament departament = new Departament(departamentName);
 
-                        DepartamentRepository.Add(departament);
+                        DAO.Departament.Add(departament);
 
-                        Console.WriteLine("\nDepartment registered successfully!");
+                        Console.WriteLine("\nDepartment #{0} registered successfully!", departament.id);
 
                         break;
 
@@ -61,7 +61,7 @@ namespace Company {
                         Console.WriteLine("***** REGISTER EMPLOYEE *****");
                         Console.Write("\n");
 
-                        if (DepartamentRepository.SelectAll().Count() == 0) {
+                        if (DAO.Departament.isEmpty()) {
                             Console.WriteLine("Employees needs a department registred.");
 
                             break;
@@ -73,14 +73,14 @@ namespace Company {
                         Console.Write("Employee: (document) ");
                         string employeeDocument = Console.ReadLine();
 
-                        if (EmployeeRepository.SelectOneByDocument(employeeDocument) != null) {
+                        if (DAO.Employee.SelectOneByDocument(employeeDocument) != null) {
                             Console.WriteLine("\nEmployee document already registred.");
 
                             break;
                         }
 
                         Console.Write("Departament: (name) ");
-                        Departament employeeDepartament = DepartamentRepository.SelectOneByName(Console.ReadLine());
+                        Departament employeeDepartament = DAO.Departament.SelectOneByName(Console.ReadLine());
 
                         if (employeeDepartament == null) {
                             Console.WriteLine("\nDepartament not found.");
@@ -90,9 +90,9 @@ namespace Company {
 
                         Employee employee = new Employee(employeeName, employeeDocument, employeeDepartament);
 
-                        EmployeeRepository.Add(employee);
+                        DAO.Employee.Add(employee);
 
-                        Console.WriteLine("\nEmployee registered successfully!");
+                        Console.WriteLine("\nEmployee #{0} registered successfully!", employee.id);
 
                         break;
 
@@ -103,9 +103,15 @@ namespace Company {
                         Console.WriteLine("***** CONSULT DEPARTAMENT *****");
                         Console.Write("\n");
 
+                        if (DAO.Departament.isEmpty()) {
+                            Console.WriteLine("No registered departments.");
+
+                            break;
+                        }
+
                         Console.Write("Departament: (name) ");
-                        List<Employee> departamentEmployees = EmployeeRepository.SelectAllByDepartament(
-                            DepartamentRepository.SelectOneByName(Console.ReadLine())
+                        List<Employee> departamentEmployees = DAO.Employee.SelectAllByDepartament(
+                            DAO.Departament.SelectOneByName(Console.ReadLine())
                         );
 
                         Console.Write("\n");
